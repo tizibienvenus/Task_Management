@@ -1,13 +1,13 @@
 
-# OALET
+# My Task
 
-OALET est une application de portefeuille financier qui permet aux utilisateurs de gérer leurs finances personnelles de manière simple et sécurisée. L'application offre une variété de fonctionnalités, notamment :
+My Task est une application de gestion de tâches qui permet aux utilisateurs d'organiser leurs activités quotidiennes de manière efficace et conviviale. L'application offre une variété de fonctionnalités, notamment :
 
 ## FEATURES
+- La gestion des listes de tâches et des deadlines ✅
+- Le suivi de la progression des tâches et des accomplissements ✅
+- La possibilité de créer des rappels et des alertes ✅
 
-- La gestion des comptes bancaires et des cartes de crédit ✅
-- Le suivi des dépenses et des revenus ✅
-- La budgétisation
 
 ## UI & THEME
 
@@ -48,9 +48,9 @@ OALET est une application de portefeuille financier qui permet aux utilisateurs 
 
 ## Technologie utilisé
 
-**SDK**: Flutter
+**SDK**: Java XML
 
-**BD**: Firebase,
+**BD**: Firebase,SQLite
 
 **Architecture**: MVC
 
