@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
 
+import static com.example.taskmanagement.R.*;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -129,22 +131,48 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.taskmanagement.databinding.ActivityMainBinding;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-
+    private ActivityMainBinding binding;
     HomeFragment homeFragment = new HomeFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
     NotificationFragment notificationFragment = new NotificationFragment();
-   // ActivityMainBinding binding = new ActivityMainBinding();
+
+    // ActivityMainBinding binding = new ActivityMainBinding();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+/*
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        //BottomNavigationView navView = findViewById(R.id.bottomNavigationView);
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.home) {
+                replace(new HomeFragment());
+            } else if (itemId == R.id.navigation_dashboard) {
+                replace(new ProfileFragment());
+            } else if (itemId == R.id.notifications) {
+                replace(new SettingsFragment());
+            }
+
+            return true;
+        });
+
+*/
 
         /*bottomNavigationView  = findViewById(R.id.bottomNavigationView);
 
@@ -171,10 +199,11 @@ public class MainActivity extends AppCompatActivity {
         });
 */
     }
-   /* private  void replace(Fragment fragment){
-        FragmentManager fragmentManager =  getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, fragment);
 
-    }*/
+    private void replace(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+
+    }
 }

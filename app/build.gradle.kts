@@ -6,6 +6,11 @@ android {
     namespace = "com.example.taskmanagement"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
+
     defaultConfig {
         applicationId = "com.example.taskmanagement"
         minSdk = 24
